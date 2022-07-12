@@ -3,6 +3,13 @@ const webpack = require('webpack');
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
+  devServer: {
+    static: {
+      directory: path.join(__dirname, '/')
+    },
+    compress: true,
+    port: 8080,
+  },
   entry: {
     app: "./assets/js/script.js",
     events: "./assets/js/events.js",
